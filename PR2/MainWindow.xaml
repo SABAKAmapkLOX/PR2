@@ -1,0 +1,41 @@
+﻿<Window x:Class="PR2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PR2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0">
+            <MenuItem Header="Функции">
+                <MenuItem Header="Сохранить массив" Click="btSaveMas_Click"/>
+                <MenuItem Header="Открыть массив" Click="btOpenMas_Click"/>
+                <MenuItem Header="Очистить массив" Click="btCleanMas_Click"/>
+            </MenuItem>
+            <MenuItem Header="О программе" Click="btInfo_Click"/>
+            <MenuItem Header="Выход" Click="btExit_Click"/>
+        </Menu>
+
+        <StackPanel Grid.Row ="1" Margin="5">
+            <Label Content="Введите длину массива" Margin="5"/>
+            <TextBox x:Name="tbColumn" Text="" Margin="5"/>
+            <Label Content="Максимально рандомное число" Margin="5"/>
+            <TextBox x:Name="tbRandom" Margin="5"/>
+            <Label Content="Результат" Margin="5"/>
+            <TextBox x:Name="tbCalc" Text="" Margin="5" IsReadOnly="True"/>
+            <Button Content="Расчитать" Margin="5" Click="btCalc_Click"/>
+            <Button Content="О программе" Margin="5" Click="btInfo_Click"/>
+            <Button Content="Выход" Margin="5" Click="btExit_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
